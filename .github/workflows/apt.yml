@@ -130,9 +130,3 @@ jobs:
       run: |
         service redis-sentinel start
         echo ping | redis-cli -p 26379
-
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.APT_S3_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.APT_S3_SECRET_ACCESS_KEY }}
-        APT_S3_BUCKET: ${{ secrets.APT_S3_BUCKET }}
-        APT_S3_REGION: ${{ secrets.APT_S3_REGION }}
