@@ -1,12 +1,7 @@
 name: Build and Publish to APT
 
 on:
-  push:
-    branches:
-    - release/**
-  pull_request:
-    branches:
-    - master
+  workflow_dispatch:
 
 jobs:
   build-source-package:
