@@ -88,7 +88,7 @@ schroot -c source:${dist}-${arch}-sbuild -d / -- apt-get update
 schroot -c source:${dist}-${arch}-sbuild -d / -- apt-get install -y build-essential python3 python3-pip python3-venv python3-dev g++ clang
 
 # Install latest CMake version for Jammy and Bullseye
-if [ "$dist" = "jammy" ] || [ "$dist" = "bullseye" ]; then
+if [ "$dist" = "jammy" ] || [ "$dist" = "bullseye" ] || [ "$dist" = "trixie" ]; then
     schroot -c source:${dist}-${arch}-sbuild -d / -- bash -c "apt install -y python3-pip && \
         python3 -m pip install --upgrade pip && \
         python3 -m pip install cmake==3.31.6 && \
